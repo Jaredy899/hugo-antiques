@@ -1,0 +1,36 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Abingdon Antiques and More'
+
+[params]
+  description = 'Your Premier Source for Fine Antiques in historic Abingdon, Virginia'
+  address = '227 W Main St, Abingdon, VA 24210'
+  phone = '276-477-1515'
+  email = 'abingdonantiquesandmore@gmail.com'
+  mapEmbed = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.835434509374!2d-81.97732168480109!3d36.70993598010572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88549183d6d8f777%3A0x5d08d6275db3b865!2s227%20W%20Main%20St%2C%20Abingdon%2C%20VA%2024210!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus'
+  [params.hours]
+    weekdays = 'Monday - Saturday'
+    weekdaysTime = '10:00 AM - 6:00 PM'
+    sunday = 'Sunday'
+    sundayTime = '1:00 PM - 4:00 PM'
+  [[params.social]]
+    name = 'Facebook'
+    url = 'https://www.facebook.com/profile.php?id=61551934216826'
+    icon = 'facebook'
+  [[params.social]]
+    name = 'Instagram'
+    url = 'https://www.instagram.com/abingdonantiques'
+    icon = 'instagram'
+  [[params.social]]
+    name = 'YouTube'
+    url = 'http://www.youtube.com/@AbingdonAntiques'
+    icon = 'youtube'
+  [[params.social]]
+    name = 'TikTok'
+    url = 'https://www.tiktok.com/@abingdonantiques'
+    icon = 'tiktok'
+
+[build]
+  publishDir = 'public'
+
+enableRobotsTXT = true
