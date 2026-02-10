@@ -10,7 +10,7 @@
   <div class="container hero-inner">
     <p class="hero-text">Discover unique antiques and collectibles in the heart of historic Abingdon, Virginia</p>
     <div class="hero-actions">
-      <a href="#" class="btn btn-map address-link" data-address="{{ $params.address }}">
+      <a href="https://www.google.com/maps/search/?api=1&query={{ $params.address | urlquery }}" class="btn btn-map" data-address="{{ $params.address }}">
         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
         {{ $params.address }}
       </a>
@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" aria-hidden="true">
+      <dialog id="lightbox" class="lightbox" aria-label="Image lightbox">
         <div class="lightbox-inner">
           <img id="lightbox-image" src="" alt="Full size image" class="lightbox-img" loading="eager" decoding="async" sizes="90vw">
           <button id="lightbox-close" class="lightbox-btn lightbox-close" aria-label="Close lightbox" type="button">&times;</button>
@@ -44,7 +44,7 @@
           <button id="lightbox-next" class="lightbox-btn lightbox-next" aria-label="Next image" type="button">&rsaquo;</button>
           <div id="lightbox-counter" class="lightbox-counter">1 / {{ len $gallery }}</div>
         </div>
-      </div>
+      </dialog>
 
       <button id="carousel-prev" class="carousel-nav carousel-prev" aria-label="Previous image" type="button">
         <svg class="carousel-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
@@ -87,7 +87,7 @@
           <p><strong>Phone:</strong> <a href="tel:{{ $params.phone }}">{{ $params.phone }}</a></p>
           <p><strong>Email:</strong> <a href="mailto:{{ $params.email }}">{{ $params.email }}</a></p>
           <p><strong>Address:</strong><br>
-          <a href="#" class="address-link" data-address="{{ $params.address }}">227 W Main St<br>Abingdon, VA 24210</a></p>
+          <a href="https://www.google.com/maps/search/?api=1&query={{ $params.address | urlquery }}" data-address="{{ $params.address }}" target="_blank" rel="noopener noreferrer">227 W Main St<br>Abingdon, VA 24210</a></p>
         </div>
       </div>
     </div>
